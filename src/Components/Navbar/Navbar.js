@@ -12,7 +12,7 @@ const Navbar = () => {
       <div className="rightDiv">
         <span className='rightDivSpan'>Home</span>
         <span className='rightDivSpan'>About</span>
-        <span className='rightDivSpan'>Contact</span>
+        <span className='rightDivSpan'>Cart</span>
         <span className='rightDivSpan'>Login <BiLogIn/></span>
       </div>
     </div>

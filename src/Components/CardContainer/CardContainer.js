@@ -58,7 +58,7 @@ const CardContainer = () => {
           <button
             className="vegButton"
             onClick={() => {
-              const data =filterButtonData(true, restaurantData);
+              const data = filterButtonData(true, restaurantData);
               setFilteredRestaurantData(data);
             }}
           >
@@ -67,16 +67,17 @@ const CardContainer = () => {
           <button
             className="nonvegButton"
             onClick={() => {
-              const data =filterButtonData(false, restaurantData);
+              const data = filterButtonData(false, restaurantData);
               setFilteredRestaurantData(data);
-            }}          >
+            }}
+          >
             Non-Veg
           </button>
         </div>
       </div>
       <div className="cardContainer">
         {filteredRestaurantData?.map((value) => (
-          <Card key={value.data.id} {...value.data} />
+            <Card key={value.data.id} {...value.data} />
         ))}
       </div>
     </>

@@ -1,0 +1,92 @@
+.restaurantMenu {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.firstItemDiv {
+  width: 85%;
+  color: rgb(250, 243, 204);
+  background-color: black;
+  display: flex;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(68, 0, 0, 0.884),
+    0 6px 20px 0 rgba(68, 1, 1, 0.747);
+}
+.firstItemDiv > img {
+  width: 25%;
+  border-radius: 5px;
+}
+.firstDivItemContent {
+  padding: 7px;
+  width: 50%;
+  margin-left: 20px;
+}
+.firstDivItemContent > span {
+  font-size: small;
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+.locationValueIcon {
+  font-size: small;
+  color: rgb(248, 239, 188);
+}
+.subFirstDivItemContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  width: 50%;
+}
+.ratingValueSpan {
+  background-color: rgb(11, 67, 75);
+  padding: 4px;
+  border-radius: 3px;
+  font-weight: 700;
+}
+.costValueSpan {
+  font-size: medium;
+  font-weight: 700;
+}
+.vegValueSpan {
+  padding: 4px;
+  border-radius: 3px;
+  font-size: medium;
+  font-weight: 700;
+  background-color: rgb(39, 196, 25);
+}
+.nonVegValueSpan {
+  padding: 4px;
+  font-size: medium;
+  font-weight: 700;
+  border-radius: 3px;
+  background-color: rgb(199, 25, 13);
+}
+.secondHeadingDiv {
+  width: 85%;
+  text-align: center;
+  font-size: x-large;
+  font-weight: 900;
+  color: rgb(158, 18, 8);
+}
+.itemList {
+  width: 65%;
+  display: flex;
+  justify-content: space-between;  
+  border-radius: 5px;
+  padding: 15px;
+  margin: 40px 0;
+  box-shadow: 0 4px 8px 0 rgba(68, 0, 0, 0.884),
+    0 6px 20px 0 rgba(68, 1, 1, 0.747);
+}
+.itemList:hover{
+    background-color: rgb(250, 227, 224);
+}
+.itemList > img{
+    width: 25%;
+    border-radius: 3px;
+}

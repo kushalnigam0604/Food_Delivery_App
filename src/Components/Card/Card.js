@@ -3,8 +3,10 @@ import { IMG_CDN_URL } from "../../constants";
 import "./Card.css";
 import { MdLocationPin } from "react-icons/md";
 import { BiSolidStar } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 const Card = ({
+  id,
   name,
   slugs,
   area,
@@ -49,10 +51,15 @@ const Card = ({
               <span>{avgRating}</span>
             </span>
           )}
-          {veg ? <span className="vegSpan">Veg</span> : <span className="nonvegSpan">Non-veg</span>}
+          {veg ? (
+            <span className="vegSpan">Veg</span>
+          ) : (
+            <span className="nonvegSpan">Non-veg</span>
+          )}
         </div>
         <div className="thirdContentDiv">
-          <span>{costForTwoString}</span>
+            <span>{costForTwoString}</span>
+            <Link to={'/restaurant/'+id}><span className="goToMenu">Go To Menu</span></Link>
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import "./RestaurantMenu.css";
 import { useParams } from "react-router-dom";
-import useRestaurantMenu from "../../Utils/useRestaurantMenu";
+import useRestaurantMenu from "../../Utils/CustomHooks/useRestaurantMenu.js";
 import { IMG_CDN_URL } from "../../constants";
 import { MdLocationPin } from "react-icons/md";
 import { BiSolidStar } from "react-icons/bi";
@@ -64,10 +64,8 @@ const RestaurantMenu = () => {
               />
               <div className="listCardContentDiv">
                 <h2>{value?.card?.info?.name}</h2>
-                <span>{value?.card?.info?.price} Rs</span>
-                <div className="addToCartButton">
-                  <button>Add To Cart</button>
-                </div>
+                <span>{value?.card?.info?.price} Rs/-</span>
+                <button className="addToCartButton">Add To Cart</button>
               </div>
             </div>
           )

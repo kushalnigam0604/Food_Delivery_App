@@ -22,7 +22,7 @@
 }
 .firstDivItemContent {
   padding: 7px;
-  width: 50%;
+  width: 72%;
   margin-left: 20px;
 }
 .firstDivItemContent > span {
@@ -40,7 +40,7 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 20px;
-  width: 50%;
+  width: 45%;
 }
 .ratingValueSpan {
   background-color: rgb(11, 67, 75);
@@ -76,17 +76,92 @@
 .itemList {
   width: 65%;
   display: flex;
-  justify-content: space-between;  
+  justify-content: space-between;
   border-radius: 5px;
   padding: 15px;
-  margin: 40px 0;
+  margin: 20px 0;
   box-shadow: 0 4px 8px 0 rgba(68, 0, 0, 0.884),
     0 6px 20px 0 rgba(68, 1, 1, 0.747);
 }
-.itemList:hover{
-    background-color: rgb(250, 227, 224);
+.itemList:hover {
+  background-color: rgb(250, 227, 224);
 }
-.itemList > img{
-    width: 25%;
-    border-radius: 3px;
+.itemList > img {
+  width: 25%;
+  border-radius: 3px;
+}
+.listCardContentDiv {
+  width: 100%;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-evenly;
+}
+.listCardContentDiv > h2 {
+  color: rgb(199, 25, 13);
+  text-align: right;
+}
+.listCardContentDiv > span {
+  color: black;
+  font-weight: 700;
+}
+.addToCartButton {
+  padding: 4px;
+  border: none;
+  background-color: rgb(235, 173, 2);
+  cursor: pointer;
+  border-radius: 3px;
+}
+.addToCartButton:hover {
+  background-color: rgb(238, 183, 30);
+}
+
+@media (min-width: 750px) and (max-width: 1086px) {
+  .subFirstDivItemContent {
+    width: 60%;
+  }
+}
+@media (min-width: 550px) and (max-width: 749px) {
+  .firstItemDiv > img {
+    width: 30%;
+  }
+  .firstDivItemContent {
+    padding: 7px;
+    width: 70%;
+    margin-left: 20px;
+  }
+  .subFirstDivItemContent {
+    width: 90%;
+  }
+}
+@media (max-width: 549px) {
+  .firstItemDiv {
+    width: 98%;
+  }
+  .firstItemDiv > img {
+    width: 33%;
+  }
+  .firstDivItemContent {
+    padding: 7px;
+    width: 68%;
+    margin-left: 20px;
+  }
+  .subFirstDivItemContent {
+    width: 100%;
+  }
+  .ratingValueSpan {
+    font-size: small;
+  }
+  .costValueSpan {
+    font-size: small;
+  }
+  .vegValueSpan {
+    padding: 3px;
+    font-size: small;
+  }
+  .nonVegValueSpan {
+    padding: 3px;
+    font-size: small;
+  }
 }

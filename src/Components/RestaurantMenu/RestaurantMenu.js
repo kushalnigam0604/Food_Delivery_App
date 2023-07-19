@@ -9,7 +9,6 @@ import { BiSolidStar } from "react-icons/bi";
 const RestaurantMenu = () => {
   const params = useParams();
   const restaurantMenu = useRestaurantMenu(params.id);
-  console.log(restaurantMenu);
 
   return (
     <div className="restaurantMenu">
@@ -49,7 +48,7 @@ const RestaurantMenu = () => {
       </div>
       <div className="secondHeadingDiv">-Recommended Items-</div>
       {restaurantMenu &&
-        restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards?.map(
+        ((restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[0]?.card?.card?.itemCards) || (restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards) || (restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards) || (restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[3]?.card?.card?.itemCards) || (restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[4]?.card?.card?.itemCards)||(restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[5]?.card?.card?.itemCards)||(restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[6]?.card?.card?.itemCards)||(restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[7]?.card?.card?.itemCards) ||(restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[8]?.card?.card?.itemCards)||(restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[9]?.card?.card?.itemCards)||(restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[10]?.card?.card?.itemCards)||(restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[11]?.card?.card?.itemCards)||(restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[12]?.card?.card?.itemCards)||(restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[13]?.card?.card?.itemCards)||(restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[14]?.card?.card?.itemCards)||(restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[15]?.card?.card?.itemCards)||(restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[16]?.card?.card?.itemCards))?.map(
           (value) => (
             <div key={value?.card?.info?.id} className="itemList">
               <img

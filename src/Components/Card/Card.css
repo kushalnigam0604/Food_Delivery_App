@@ -119,12 +119,12 @@
 }
 .thirdContentDiv > a{
     text-decoration: underline;
-    color: rgb(87, 81, 81);
+    color: rgb(199, 25, 13);
     font-size: small;
     font-weight: 900;
 }
 .thirdContentDiv > a:hover{
-    color: rgb(11, 12, 11);
+    color: rgb(5, 9, 236);
 }
 
 @media (min-width: 750px) and (max-width: 1086px) {

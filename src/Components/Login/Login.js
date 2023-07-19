@@ -1,21 +1,19 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { userLogin } from "../../Utils/Redux/userSlice";
+import { userLogin, userLogout } from "../../Utils/Redux/userSlice";
 import "./Login.css";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
-  const isLogin = useSelector(state => state.user.item)
-
-  useEffect(() => {
-    console.log(isLogin);
-  }, [isLogin])
+  const isLogin = useSelector((state) => state.user.item);
 
   function checkUserLogin() {
     if (email === "food@gmail.com" && password === "food") {
       dispatch(userLogin());
+    } else {
+      dispatch(userLogout());
     }
     setEmail("");
     setPassword("");
@@ -39,6 +37,7 @@ const Login = () => {
         <button onClick={() => checkUserLogin()}>Login</button>
         <p>Email - food@gmail.com</p>
         <p>Password - food</p>
+        <span>{isLogin ? "Login Successful." : " "}</span>
       </div>
     </div>
   );

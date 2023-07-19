@@ -45,6 +45,11 @@
   font-size: small;
   font-weight: 700;
 }
+.loginCard > span{
+  color: rgb(43, 255, 0);
+  font-size: medium;
+  font-weight: 700;
+}
 
 @media (min-width: 750px) and (max-width: 1086px) {
   .loginCard {

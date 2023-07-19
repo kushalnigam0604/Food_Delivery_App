@@ -6,6 +6,7 @@ const useRestaurantMenu = (resId) => {
 
   useEffect(() => {
     getRestaurantInfo();
+    // eslint-disable-next-line
   }, []);
 
   async function getRestaurantInfo() {

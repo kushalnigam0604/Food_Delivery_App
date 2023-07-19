@@ -1,24 +1,27 @@
-import React from 'react'
-import Body from './Components/Body/Body'
-import Footer from './Components/Footer/Footer'
-import Navbar from './Components/Navbar/Navbar'
+import React from "react";
+import Body from "./Components/Body/Body";
+import Footer from "./Components/Footer/Footer";
+import Navbar from "./Components/Navbar/Navbar";
 import { createBrowserRouter, Outlet } from "react-router-dom";
-import Cart from './Components/Cart/Cart';
-import Login from './Components/Login/Login';
-import RestaurantMenu from './Components/RestaurantMenu/RestaurantMenu';
-
+import Login from "./Components/Login/Login";
+import RestaurantMenu from "./Components/RestaurantMenu/RestaurantMenu";
+import { Provider } from "react-redux";
+import store from "./Utils/Redux/store";
+import About from "./Components/About/About";
 
 const App = () => {
   return (
-    <div>
-      <Navbar/>
-      <Outlet/>
-      <Footer/>
-    </div>
-  )
-}
+    <Provider store={store}>
+      <>
+        <Navbar />
+        <Outlet />
+        <Footer />
+      </>
+    </Provider>
+  );
+};
 
-export default App
+export default App;
 
 export const appRouter = createBrowserRouter([
   {
@@ -30,8 +33,8 @@ export const appRouter = createBrowserRouter([
         element: <Body />,
       },
       {
-        path: "/cart",
-        element: <Cart />,
+        path: "/about",
+        element: <About />,
       },
       {
         path: "/login",
@@ -41,9 +44,6 @@ export const appRouter = createBrowserRouter([
         path: "/restaurant/:id",
         element: <RestaurantMenu />,
       },
-      
     ],
   },
 ]);
-
-

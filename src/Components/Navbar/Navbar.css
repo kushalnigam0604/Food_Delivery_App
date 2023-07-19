@@ -22,19 +22,19 @@
   display: flex;
   justify-content: flex-end;
 }
-.rightDiv > a {
-  text-decoration: none;
-  color: rgb(255, 246, 230);
-}
 .rightDivSpan {
-  display: flex;
-  align-items: center;
   margin: 30px;
   font-size: large;
   font-weight: 600;
   cursor: pointer;
 }
-.rightDivSpan:hover {
+.rightDivSpan > a{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: rgb(255, 246, 230);
+}
+.rightDivSpan > a:hover {
   color: red;
 }
 

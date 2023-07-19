@@ -48,27 +48,60 @@ const RestaurantMenu = () => {
       </div>
       <div className="secondHeadingDiv">-Recommended Items-</div>
       {restaurantMenu &&
-        ((restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[0]?.card?.card?.itemCards) || (restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards) || (restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards) || (restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[3]?.card?.card?.itemCards) || (restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[4]?.card?.card?.itemCards)||(restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[5]?.card?.card?.itemCards)||(restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[6]?.card?.card?.itemCards)||(restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[7]?.card?.card?.itemCards) ||(restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[8]?.card?.card?.itemCards)||(restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[9]?.card?.card?.itemCards)||(restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[10]?.card?.card?.itemCards)||(restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[11]?.card?.card?.itemCards)||(restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[12]?.card?.card?.itemCards)||(restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[13]?.card?.card?.itemCards)||(restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[14]?.card?.card?.itemCards)||(restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[15]?.card?.card?.itemCards)||(restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[16]?.card?.card?.itemCards))?.map(
-          (value) => (
-            <div key={value?.card?.info?.id} className="itemList">
-              <img
-                src={
-                  value?.card?.info?.imageId
-                    ? IMG_CDN_URL + value?.card?.info?.imageId
-                    : IMG_CDN_URL +
-                      restaurantMenu?.cards[0]?.card?.card?.info
-                        ?.cloudinaryImageId
-                }
-                alt=""
-              />
-              <div className="listCardContentDiv">
-                <h2>{value?.card?.info?.name}</h2>
-                <span>{value?.card?.info?.price} Rs/-</span>
-                <button className="addToCartButton">Add To Cart</button>
-              </div>
+        (
+          restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[0]
+            ?.card?.card?.itemCards ||
+          restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]
+            ?.card?.card?.itemCards ||
+          restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]
+            ?.card?.card?.itemCards ||
+          restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[3]
+            ?.card?.card?.itemCards ||
+          restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[4]
+            ?.card?.card?.itemCards ||
+          restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[5]
+            ?.card?.card?.itemCards ||
+          restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[6]
+            ?.card?.card?.itemCards ||
+          restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[7]
+            ?.card?.card?.itemCards ||
+          restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[8]
+            ?.card?.card?.itemCards ||
+          restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[9]
+            ?.card?.card?.itemCards ||
+          restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR
+            ?.cards[10]?.card?.card?.itemCards ||
+          restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR
+            ?.cards[11]?.card?.card?.itemCards ||
+          restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR
+            ?.cards[12]?.card?.card?.itemCards ||
+          restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR
+            ?.cards[13]?.card?.card?.itemCards ||
+          restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR
+            ?.cards[14]?.card?.card?.itemCards ||
+          restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR
+            ?.cards[15]?.card?.card?.itemCards ||
+          restaurantMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR
+            ?.cards[16]?.card?.card?.itemCards
+        )?.map((value) => (
+          <div key={value?.card?.info?.id} className="itemList">
+            <img
+              src={
+                value?.card?.info?.imageId
+                  ? IMG_CDN_URL + value?.card?.info?.imageId
+                  : IMG_CDN_URL +
+                    restaurantMenu?.cards[0]?.card?.card?.info
+                      ?.cloudinaryImageId
+              }
+              alt=""
+            />
+            <div className="listCardContentDiv">
+              <h2>{value?.card?.info?.name}</h2>
+              <span>{value?.card?.info?.price} Rs/-</span>
+              <button className="addToCartButton">Add To Cart</button>
             </div>
-          )
-        )}
+          </div>
+        ))}
     </div>
   );
 };

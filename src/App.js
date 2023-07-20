@@ -41,7 +41,7 @@ export const appRouter = createBrowserRouter([
         element: <Login />,
       },
       {
-        path: "/restaurant/:id",
+        path: "/restaurant",
         element: <RestaurantMenu />,
       },
     ],

@@ -10,7 +10,7 @@
   align-items: center;
 }
 .card:hover {
-  background-color: rgb(248, 226, 223);
+  background-color: rgb(254, 255, 202);
 }
 .cardImage {
   width: 93%;

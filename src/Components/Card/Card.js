@@ -59,7 +59,7 @@ const Card = ({
         </div>
         <div className="thirdContentDiv">
             <span>{costForTwoString}</span>
-            <Link to='/restaurant'><span className="goToMenu">Go To Menu</span></Link>
+            <Link to={'/restaurant/'+id}><span className="goToMenu">Go To Menu</span></Link>
         </div>
       </div>
     </div>

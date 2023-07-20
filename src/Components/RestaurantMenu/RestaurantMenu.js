@@ -4,8 +4,14 @@ import { RESTAURANT_MENU_DATA } from "../../restaurantMenuData";
 import { MdLocationPin } from "react-icons/md";
 import { BiSolidStar } from "react-icons/bi";
 import main_logo from "../../assets/main_logo.jpg";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart } from "../../Utils/Redux/cartSlice";
+import { Link } from "react-router-dom";
 
 const RestaurantMenu = () => {
+  const dispatch = useDispatch();
+  const isLogin = useSelector((state) => state.user.item);
+
   return (
     <div className="restaurantMenu">
       <div className="firstItemDiv">
@@ -36,7 +42,7 @@ const RestaurantMenu = () => {
             <div className="listCardContentDiv">
               <h2>{value?.itemName}</h2>
               <span>{value?.price} Rs/-</span>
-              <button className="addToCartButton">Add To Cart</button>
+              {isLogin ? <button className="addToCartButton" onClick={() => dispatch(addToCart(value))}>Add To Cart</button> : <Link to='/login'><button className="addToCartButton">Add To Cart</button></Link> }
             </div>
           </div>
         ))}

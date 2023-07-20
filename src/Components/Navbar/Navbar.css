@@ -54,7 +54,7 @@
     margin-left: 10px;
   }
   .rightDiv {
-    width: 65%;
+    width: 80%;
   }
   .rightDivSpan {
     margin: 20px;
@@ -64,6 +64,7 @@
   .navbar {
     flex-direction: column;
     align-items: center;
+    padding-bottom: 5px;
   }
   .logoDiv {
     width: 20%;
@@ -75,5 +76,6 @@
   }
   .rightDivSpan {
     margin: 0;
+    font-weight: 300;
   }
 }

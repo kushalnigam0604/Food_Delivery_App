@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { v4 as uuidv4 } from "uuid";
 
 const cartSlice = createSlice({
   name: "cart",
@@ -7,11 +8,16 @@ const cartSlice = createSlice({
   },
   reducers: {
     addToCart: (state, action) => {
-      state.item.push(1);
+      const uid = { uid: uuidv4() };
+      const item = { ...action.payload, ...uid };
+      state.item.push(item);
     },
     removeFromCart: (state, action) => {
-      state.item.pop();
-    }
+      const index = state.item.findIndex(
+        (i) => i.uid === action.payload
+      );
+      state.item.splice(index,1);
+    },
   },
 });
 

@@ -13,9 +13,9 @@ const App = () => {
   return (
     <Provider store={store}>
       <>
-        <Navbar />
-        <Outlet />
-        <Footer />
+          <Navbar />
+          <Outlet />
+          <Footer />
       </>
     </Provider>
   );

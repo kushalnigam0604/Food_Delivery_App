@@ -17,7 +17,7 @@
     0 6px 20px 0 rgba(68, 1, 1, 0.747);
 }
 .firstItemDiv > img {
-  width: 25%;
+  width: 15%;
   border-radius: 5px;
 }
 .firstDivItemContent {
@@ -52,14 +52,7 @@
   font-size: medium;
   font-weight: 700;
 }
-.vegValueSpan {
-  padding: 4px;
-  border-radius: 3px;
-  font-size: medium;
-  font-weight: 700;
-  background-color: rgb(39, 196, 25);
-}
-.nonVegValueSpan {
+.deliciousValueSpan {
   padding: 4px;
   font-size: medium;
   font-weight: 700;
@@ -156,11 +149,7 @@
   .costValueSpan {
     font-size: small;
   }
-  .vegValueSpan {
-    padding: 3px;
-    font-size: small;
-  }
-  .nonVegValueSpan {
+  .deliciousValueSpan {
     padding: 3px;
     font-size: small;
   }

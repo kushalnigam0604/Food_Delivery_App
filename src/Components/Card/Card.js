@@ -8,8 +8,8 @@ import { Link } from "react-router-dom";
 const Card = ({
   id,
   name,
-  slugs,
-  area,
+  locality,
+  areaName,
   veg,
   cloudinaryImageId,
   avgRating,
@@ -20,7 +20,7 @@ const Card = ({
     <div className="card">
       <div className="cardImage">
         <img src={IMG_CDN_URL + cloudinaryImageId} alt="" />
-        {!aggregatedDiscountInfoV3 ? (
+        {!(aggregatedDiscountInfoV3.header && aggregatedDiscountInfoV3.subHeader) ? (
           <span>NO OFFER</span>
         ) : (
           <span>
@@ -35,7 +35,7 @@ const Card = ({
           <span className="citySpan">
             <MdLocationPin className="locationIcon" />
             <span>
-              {area}, {slugs.city}
+              {areaName}, {locality}
             </span>
           </span>
         </div>

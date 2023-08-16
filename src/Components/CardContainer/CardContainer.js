@@ -11,8 +11,8 @@ const CardContainer = () => {
   async function getAllRestaurantData() {
     const data = await fetch(RESTAURANT_LIST_URL);
     const json = await data.json();
-    setRestaurantData(json?.data?.cards[2]?.data?.data?.cards);
-    setFilteredRestaurantData(json?.data?.cards[2]?.data?.data?.cards);
+    setRestaurantData(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    setFilteredRestaurantData(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
   }
   function filterSearchData(searchText, restaurantData) {
     const data = restaurantData.filter((val) =>
@@ -77,7 +77,7 @@ const CardContainer = () => {
       </div>
       <div className="cardContainer">
         {filteredRestaurantData?.map((value) => (
-            <Card key={value.data.id} {...value.data} />
+            <Card key={value.info.id} {...value.info} />
         ))}
       </div>
     </>

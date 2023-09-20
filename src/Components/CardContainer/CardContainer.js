@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { RESTAURANT_LIST_URL } from "../../constants";
+import RestaurantData from '../../restaurantData.json';
 import Card from "../Card/Card";
 import Shimmer from "../Shimmer/Shimmer";
 import "./CardContainer.css";
@@ -9,21 +9,25 @@ const CardContainer = () => {
   const [restaurantData, setRestaurantData] = useState([]);
   const [filteredRestaurantData, setFilteredRestaurantData] = useState([]);
   async function getAllRestaurantData() {
-    const data = await fetch(RESTAURANT_LIST_URL);
-    const json = await data.json();
-    setRestaurantData(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-    setFilteredRestaurantData(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    // const data = await fetch(RESTAURANT_LIST_URL);
+    // const json = await data.json();
+    // setRestaurantData(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    // setFilteredRestaurantData(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    setRestaurantData(RestaurantData);
+    setFilteredRestaurantData(RestaurantData);
+    console.log(RestaurantData);
   }
   function filterSearchData(searchText, restaurantData) {
     const data = restaurantData.filter((val) =>
-      val?.data?.name?.toLowerCase()?.includes(searchText.toLowerCase())
+      val?.info?.name?.toLowerCase()?.includes(searchText.toLowerCase())
     );
     setSearchText("");
     return data;
   }
   function filterButtonData(booleanValue, restaurantData) {
+    console.log(restaurantData);
     const data = restaurantData.filter(
-      (val) => val?.data?.veg === booleanValue
+      (val) => val?.info?.veg === booleanValue
     );
     return data;
   }

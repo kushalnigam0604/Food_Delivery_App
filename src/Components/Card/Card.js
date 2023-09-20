@@ -20,7 +20,7 @@ const Card = ({
     <div className="card">
       <div className="cardImage">
         <img src={IMG_CDN_URL + cloudinaryImageId} alt="" />
-        {!(aggregatedDiscountInfoV3.header && aggregatedDiscountInfoV3.subHeader) ? (
+        {!(aggregatedDiscountInfoV3?.header && aggregatedDiscountInfoV3?.subHeader) ? (
           <span>NO OFFER</span>
         ) : (
           <span>
